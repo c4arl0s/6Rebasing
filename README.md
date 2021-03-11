@@ -1,24 +1,22 @@
-# 6RebasingRysGitTutorial
+# [go back to Content](https://github.com/c4arl0s/RysGitTutorial#rys-git-tutorial)
 
-6 Rebasing Rys Git Tutorial
+# [6 Rebasing Rys Git Tutorial - Content](https://github.com/c4arl0s/6RebasingRysGitTutorial#go-back-to-content)
+ * [Create an About Section](https://github.com/c4arl0s/6RebasingRysGitTutorial#-create-an-about-section)
+ * [Add an About Page](https://github.com/c4arl0s/6RebasingRysGitTutorial#-add-an-about-page)
+ * [Another emergency update!](https://github.com/c4arl0s/6RebasingRysGitTutorial#-another-emergency-update)
+ * [Publish News Hotfix](https://github.com/c4arl0s/6RebasingRysGitTutorial#-publish-news-hotfix)
+ * [Rebase the about Branch](https://github.com/c4arl0s/6RebasingRysGitTutorial#-rebase-the-about-branch)
+ * [Add a Personal Bio](https://github.com/c4arl0s/6RebasingRysGitTutorial#-add-a-personal-bio)
+ * [Add Dummy Page for Mary](https://github.com/c4arl0s/6RebasingRysGitTutorial#-add-dummy-page-for-mary)
+ * [Link to the About Section](https://github.com/c4arl0s/6RebasingRysGitTutorial#-link-to-the-about-section)
+ * [Clean up the Commit History](https://github.com/c4arl0s/6RebasingRysGitTutorial#-clean-up-the-commit-history)
+ * [Stop to Amend a Commit](https://github.com/c4arl0s/6RebasingRysGitTutorial#-stop-to-amend-a-commit)
+ * [Continue the Interactive Rebase](https://github.com/c4arl0s/6RebasingRysGitTutorial#-continue-the-interactive-rebase)
+ * [Publish the About Section](https://github.com/c4arl0s/6RebasingRysGitTutorial#-publish-the-about-section)
+ * [Conclusion](https://github.com/c4arl0s/6RebasingRysGitTutorial#-conclusion)
+ * [Quick References](https://github.com/c4arl0s/6RebasingRysGitTutorial#-quick-references)
 
-# 6. [Rebasing](https://github.com/c4arl0s/RysGitTutorial#6-rebasing)	
- * [Create an About Section](https://github.com/c4arl0s/RysGitTutorial#-create-an-about-section)
- * [Add an About Page](https://github.com/c4arl0s/RysGitTutorial#-add-an-about-page)
- * [Another emergency update!](https://github.com/c4arl0s/RysGitTutorial#-another-emergency-update)
- * [Publish News Hotfix](https://github.com/c4arl0s/RysGitTutorial#-publish-news-hotfix)
- * [Rebase the about Branch](https://github.com/c4arl0s/RysGitTutorial#-rebase-the-about-branch)
- * [Add a Personal Bio](https://github.com/c4arl0s/RysGitTutorial#-add-a-personal-bio)
- * [Add Dummy Page for Mary](https://github.com/c4arl0s/RysGitTutorial#-add-dummy-page-for-mary)
- * [Link to the About Section](https://github.com/c4arl0s/RysGitTutorial#-link-to-the-about-section)
- * [Clean up the Commit History](https://github.com/c4arl0s/RysGitTutorial#-clean-up-the-commit-history)
- * [Stop to Amend a Commit](https://github.com/c4arl0s/RysGitTutorial#-stop-to-amend-a-commit)
- * [Continue the Interactive Rebase](https://github.com/c4arl0s/RysGitTutorial#-continue-the-interactive-rebase)
- * [Publish the About Section](https://github.com/c4arl0s/RysGitTutorial#-publish-the-about-section)
- * [Conclusion](https://github.com/c4arl0s/RysGitTutorial#-conclusion-4)
- * [Quick References](https://github.com/c4arl0s/RysGitTutorial#-quick-references-1)
-
-# 6. [Rebasing]()	
+# [6 Rebasing Rys Git Tutorial](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing-rys-git-tutorial---content)
 
 Let's start this module by taking an in-depth look at our history. The six commits asterisked below are part of the same train thought. 
 
@@ -55,7 +53,7 @@ After rebasing, the feature branch has a new parent commit, which is the same co
 To explore Git's rebasing capabilities, we will need to build up our example project so that we have something to work with. Then, we will go back and rewrite history using **git rebase**
 
 
-# 	* [Create an About Section]()
+# 	* [Create an About Section](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing-rys-git-tutorial---content)
 
 We will begin by creating an about page for the website. Remember, we should be doing all of our work in isolated branches so that we don't cause any unintended changes to the stable version of the project.
 
@@ -91,7 +89,7 @@ $ git commit -m "Add empty page in about section"
  create mode 100644 about/index.html
 ```
 
-# 	* [Add an About Page]()
+# 	* [Add an About Page](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing-rys-git-tutorial---content)
 
 Next, we will add some HTML to about/index.html
 
@@ -139,7 +137,7 @@ After a few commits on this branch, our history looks like the following.
 
 ![Screen Shot 2020-05-26 at 11 41 12](https://user-images.githubusercontent.com/24994818/82927109-d1d24680-9f45-11ea-92c9-98439ff3652c.png)
 
-# 	* [Another emergency update!]()
+# 	* [Another emergency update!](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing-rys-git-tutorial---content)
 
 Our boss just gave us some more breaking news ! Again, we will use a hotfix branch to update the site without affecting our about page developments. Make sure to base the updates on **master**, not the **about** branch.
 
@@ -231,7 +229,7 @@ $ git commit -m "Add article for 2nd news item"
  create mode 100644 news-2.html
 ```
 
-# 	* [Publish News Hotfix]()
+# 	* [Publish News Hotfix](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing-rys-git-tutorial---content)
 
 We are ready to merge the news update back into **master**
 
@@ -259,7 +257,7 @@ The **master** branch has not been altered since we created news-hotfix, so Git 
 
 ![Screen Shot 2020-05-26 at 16 45 12](https://user-images.githubusercontent.com/24994818/82953378-49b56680-9f70-11ea-8bc0-516728c17beb.png)
 
-# 	* [Rebase the about Branch]()
+# 	* [Rebase the about Branch](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing-rys-git-tutorial---content)
 
 This puts us in the exact position as we were in before our first 3-way merge. We want to pull changes from **master** into a feature branch, only this time we will do it with a rebase instead of a merge.
 
@@ -465,7 +463,7 @@ squash 5f022e1 Add empty HTML page for Mary's bio
 pick ce9d652 Add link to about section in home page
 ```
 
-then get inside editor vi
+Then get inside editor vi
 
 ```vim
 pick edff70e Add empty page in about section
@@ -532,7 +530,7 @@ Add contents to about page
 #
 ```
 
-after the two message:
+After the two message:
 
 ```console
 $ git rebase -i master
@@ -834,26 +832,30 @@ The next module will get a little bit more involved in our project history. We w
 ```console
 $ git rebase newBase
 ```
+Move the current branch's commits to the tip of new-base, which can be either a branch name or a commit ID.
 
 ```console
 $ git rebase -i newBase
 ```
+Perform an interactive rebase and select actions for each commit.
 
 ```console
 $ git commit --amend
 ```
+Add staged changes to the most recent commit instead of creating a new one.
 
 ```console
 $ git rebase --continue
 ```
+Continue a rebase after amending a commit.
 
 ```console
 $ git rebase abort
 ```
+Abandon the current interactive rebase and return the repository to its former state.
 
 ```console
 $ git merge --no-ff branchName
 ```
-
 Force a merge commit even if Git could do a fast-forward merge.
 
