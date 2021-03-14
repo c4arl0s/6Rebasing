@@ -386,9 +386,9 @@ e1bc771 add a rainbow to crazy.html
 
 # 	* [Add Dummy Page for Mary](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing---content)
 
-Once again, the next two snapshots are unneccessarily trivil. However, we will use an interactive rebase to combine them into a single commit later on. That's right, git rebase not only lets you move branches around, it enables you to manipulate individual commits as you do so.
+**Once again, the next two snapshots are unneccessarily trivial**. However, we will use an interactive rebase to combine them into a single commit later on. That's right, git rebase not only lets you move branches around, it enables you to manipulate individual commits as you do so.
 
-Create a new empty file in the about section about/mary.html
+**Create a new empty file in the about section about/mary.**html
 
 ```console
 $ vim about/mary.html
