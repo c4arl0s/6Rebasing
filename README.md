@@ -316,7 +316,29 @@ The rebase took the entire about branch and plopped it onto the tip of the maste
 
 Print the output here:
 
+```console
+$ git rebase master                                            
+Successfully rebased and updated refs/heads/BoldSentencesInSections.
+```
 
+Then see the commits from master on BoldSentencesInSections branch:
+
+```console
+$ git log —oneline
+7a942bd (HEAD -> BoldSentencesInSections) Bold sentences in < Add Dummy Page for Mary>
+8e82ab3 Bold sentences in <Add a Personal Bio> section
+8016a81 (origin/master, origin/HEAD, master) Modify links to go back to content menu
+33bab45 Add the goals of the new example to see how rebase works out
+77d96da Bold important sentences as part of the new rules of project documentation
+63e34af remove bolded words to start bolding sentences, according to new rules of how to document a project
+b1b0228 Update content links to improve project performance
+c583496 Move this information to this repository to improve organization
+ff4b5be Initial commit
+```
+
+Now BoldSentencesInSections contains the changes of master.
+
+Go back to master and merge BoldSentencesInSections on master. You will be able to do a fast-forward merge.
 
 # 	* [Add a Personal Bio](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing---content)
 
