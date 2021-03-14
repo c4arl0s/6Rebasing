@@ -320,7 +320,7 @@ Print the output here:
 
 # 	* [Add a Personal Bio](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing---content)
 
-With our news hotfix out of the way, we can now continue work on our about section. Create the file about/me.html with the following contents:
+**With our news hotfix out of the way, we can now continue work on our about section**. Create the file about/me.html with the following contents:
 
 ```html
 <!DOCTYPE html>
@@ -381,7 +381,7 @@ e1bc771 add a rainbow to crazy.html
 6a442fc Create index page for the message
 ```
 
-Remember that thanks to the rebase, about rests on top of master. So, All of our about section commits are grouped together, which would not be the case had we merged instead of rebase. This also eliminates an unnecessary fork in our project history.
+**Remember that thanks to the rebase, about rests on top of master**. So, All of our about section commits are grouped together, which would not be the case had we merged instead of rebase. This also eliminates an unnecessary fork in our project history.
 
 
 # 	* [Add Dummy Page for Mary](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing---content)
