@@ -340,6 +340,23 @@ Now BoldSentencesInSections contains the changes of master.
 
 Go back to master and merge BoldSentencesInSections on master. You will be able to do a fast-forward merge.
 
+```console
+$ git add . 
+$ git commit -m "Add conclusions to the new example to see how rebase works out"
+[BoldSentencesInSections 9753597] Add conclusions to the new example to see how rebase works out
+ 1 file changed, 22 insertions(+)
+$ git checkout master                                       
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+$ git merge BoldSentencesInSections                                         
+Updating 8016a81..9753597
+Fast-forward
+ README.md | 30 ++++++++++++++++++++++++++----
+ 1 file changed, 26 insertions(+), 4 deletions(-)
+```
+
+Nice !!!!!!!!!!!
+
 # 	* [Add a Personal Bio](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing---content)
 
 **With our news hotfix out of the way, we can now continue work on our about section**. Create the file about/me.html with the following contents:
