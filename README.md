@@ -43,19 +43,19 @@ b9f2b14 Merge branch 'master' into crazy
 ```
 
 Fortunately, Git includes a tool to help us clean up our commits: git rebase. 
-Rebasing lets us move branches around by changing the commit that they are based on. 
+**Rebasing lets us move branches around by changing the commit that they are based on**. 
 Conceptually, this is what it allows us to do:
 
 ![Screen Shot 2020-05-26 at 11 15 18](https://user-images.githubusercontent.com/24994818/82924636-3a1f2900-9f42-11ea-8f9a-fb7163b73a5e.png)
 
-After rebasing, the feature branch has a new parent commit, which is the same commit pointed to by master. Instead of joining the branches with a merge commit, rebasing integrates the feature branch by building on top of master. The result is a perfectly linear history that reads more like a story than the hodgepodge of unrelated edits shown above.
+**After rebasing, the feature branch has a new parent commit, which is the same commit pointed to by master**. **Instead of joining the branches with a merge commit, rebasing integrates the feature branch by building on top of master**. The result is a perfectly linear history that reads more like a story than the hodgepodge of unrelated edits shown above.
 
 To explore Git's rebasing capabilities, we will need to build up our example project so that we have something to work with. Then, we will go back and rewrite history using git rebase
 
 
 # 	* [Create an About Section](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing-rys-git-tutorial---content)
 
-We will begin by creating an about page for the website. Remember, we should be doing all of our work in isolated branches so that we don't cause any unintended changes to the stable version of the project.
+We will begin by creating an about page for the website. **Remember, we should be doing all of our work in isolated branches so that we don't cause any unintended changes to the stable version of the project**.
 
 ```console
 $ git branch about
@@ -139,7 +139,7 @@ After a few commits on this branch, our history looks like the following.
 
 # 	* [Another emergency update!](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing-rys-git-tutorial---content)
 
-Our boss just gave us some more breaking news ! Again, we will use a hotfix branch to update the site without affecting our about page developments. Make sure to base the updates on master, not the about branch.
+Our boss just gave us some more breaking news ! **Again, we will use a hotfix branch to update the site without affecting our about page developments**. Make sure to base the updates on master, not the about branch.
 
 ```console
 $ git checkout master
@@ -253,13 +253,15 @@ $ git branch -d news-hotfix
 Deleted branch news-hotfix (was 74afd90).
 ```
 
-The master branch has not been altered since we created news-hotfix, so Git can perform a fast-forward merge. Our repository now looks like the following.
+**The master branch has not been altered since we created news-hotfix, so Git can perform a fast-forward merge**. Our repository now looks like the following.
 
 ![Screen Shot 2020-05-26 at 16 45 12](https://user-images.githubusercontent.com/24994818/82953378-49b56680-9f70-11ea-8bc0-516728c17beb.png)
 
 # 	* [Rebase the about Branch](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing-rys-git-tutorial---content)
 
-This puts us in the exact position as we were in before our first 3-way merge. We want to pull changes from master into a feature branch, only this time we will do it with a rebase instead of a merge.
+**This puts us in the exact position as we were in before our first 3-way merge**. 
+
+**We want to pull changes from master into a feature branch, only this time we will do it with a rebase instead of a merge**.
 
 ```console
 $ git checkout about
@@ -301,7 +303,8 @@ The rebase took the entire about branch and plopped it onto the tip of the maste
 
 ![Screen Shot 2020-05-26 at 16 56 45](https://user-images.githubusercontent.com/24994818/82954216-e75d6580-9f71-11ea-8cd6-ad0e3c78d9d2.png)
 
-After the rebase, about is a linear extension of the master branch, enabling us to do a fast-forward merge later on. Rebasing also allowed us to integrate the most up-to-date version of master without a merge commit.
+1. **After the rebase, about is a linear extension of the master branch, enabling us to do a fast-forward merge later on**. 
+2. **Rebasing also allowed us to integrate the most up-to-date version of master without a merge commit**.
 
 # 	* [Add a Personal Bio](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
 
