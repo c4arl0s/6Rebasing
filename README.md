@@ -306,6 +306,18 @@ The rebase took the entire about branch and plopped it onto the tip of the maste
 1. **After the rebase, about is a linear extension of the master branch, enabling us to do a fast-forward merge later on**. 
 2. **Rebasing also allowed us to integrate the most up-to-date version of master without a merge commit**.
 
+# [Let's create an example modifying README.md file]()
+
+1. First modify links that makes go back to content menu on master branch.
+2. After that, go back to the last commit and create a new branch called: boldNewSentences.
+3. In boldNewSentences create two commits, grap two sections and make the changes to each section.
+4. Then, on boldNewSentences branch execute: `$ git rebase master`.
+5. Still on boldNewSentences brancg execute `$ git log --oneline` to see the two commits created and the commit created on branch master with the modification of the links. WoooW !!!!!i
+
+Print the output here:
+
+
+
 # 	* [Add a Personal Bio](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
 
 With our news hotfix out of the way, we can now continue work on our about section. Create the file about/me.html with the following contents:
