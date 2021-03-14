@@ -1,6 +1,6 @@
 # [go back to Content](https://github.com/c4arl0s/RysGitTutorial#rys-git-tutorial)
 
-# [6 Rebasing Rys Git Tutorial - Content](https://github.com/c4arl0s/6RebasingRysGitTutorial#go-back-to-content)
+# [6 Rebasing - Content](https://github.com/c4arl0s/6RebasingRysGitTutorial#go-back-to-content)
  * [Create an About Section](https://github.com/c4arl0s/6RebasingRysGitTutorial#-create-an-about-section)
  * [Add an About Page](https://github.com/c4arl0s/6RebasingRysGitTutorial#-add-an-about-page)
  * [Another emergency update!](https://github.com/c4arl0s/6RebasingRysGitTutorial#-another-emergency-update)
@@ -16,7 +16,7 @@
  * [Conclusion](https://github.com/c4arl0s/6RebasingRysGitTutorial#-conclusion)
  * [Quick References](https://github.com/c4arl0s/6RebasingRysGitTutorial#-quick-references)
 
-# [6 Rebasing Rys Git Tutorial](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing-rys-git-tutorial---content)
+# [6 Rebasing](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing---content)
 
 Let's start this module by taking an in-depth look at our history. The six commits asterisked below are part of the same train thought. 
 
@@ -53,7 +53,7 @@ Conceptually, this is what it allows us to do:
 To explore Git's rebasing capabilities, we will need to build up our example project so that we have something to work with. Then, we will go back and rewrite history using git rebase
 
 
-# 	* [Create an About Section](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing-rys-git-tutorial---content)
+# 	* [Create an About Section](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing---content)
 
 We will begin by creating an about page for the website. **Remember, we should be doing all of our work in isolated branches so that we don't cause any unintended changes to the stable version of the project**.
 
@@ -89,7 +89,7 @@ $ git commit -m "Add empty page in about section"
  create mode 100644 about/index.html
 ```
 
-# 	* [Add an About Page](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing-rys-git-tutorial---content)
+# 	* [Add an About Page](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing---content)
 
 Next, we will add some HTML to about/index.html
 
@@ -137,7 +137,7 @@ After a few commits on this branch, our history looks like the following.
 
 ![Screen Shot 2020-05-26 at 11 41 12](https://user-images.githubusercontent.com/24994818/82927109-d1d24680-9f45-11ea-92c9-98439ff3652c.png)
 
-# 	* [Another emergency update!](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing-rys-git-tutorial---content)
+# 	* [Another emergency update!](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing---content)
 
 Our boss just gave us some more breaking news ! **Again, we will use a hotfix branch to update the site without affecting our about page developments**. Make sure to base the updates on master, not the about branch.
 
@@ -229,7 +229,7 @@ $ git commit -m "Add article for 2nd news item"
  create mode 100644 news-2.html
 ```
 
-# 	* [Publish News Hotfix](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing-rys-git-tutorial---content)
+# 	* [Publish News Hotfix](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing---content)
 
 We are ready to merge the news update back into master
 
@@ -257,7 +257,7 @@ Deleted branch news-hotfix (was 74afd90).
 
 ![Screen Shot 2020-05-26 at 16 45 12](https://user-images.githubusercontent.com/24994818/82953378-49b56680-9f70-11ea-8bc0-516728c17beb.png)
 
-# 	* [Rebase the about Branch](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing-rys-git-tutorial---content)
+# 	* [Rebase the about Branch](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing---content)
 
 **This puts us in the exact position as we were in before our first 3-way merge**. 
 
@@ -306,7 +306,7 @@ The rebase took the entire about branch and plopped it onto the tip of the maste
 1. **After the rebase, about is a linear extension of the master branch, enabling us to do a fast-forward merge later on**. 
 2. **Rebasing also allowed us to integrate the most up-to-date version of master without a merge commit**.
 
-# [Let's create an example modifying README.md file]()
+# [Let's create an example modifying README.md file](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing---content)
 
 1. First modify links that makes go back to content menu on master branch.
 2. After that, go back to the last commit and create a new branch called: boldNewSentences.
@@ -318,7 +318,7 @@ Print the output here:
 
 
 
-# 	* [Add a Personal Bio](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
+# 	* [Add a Personal Bio](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing---content)
 
 With our news hotfix out of the way, we can now continue work on our about section. Create the file about/me.html with the following contents:
 
@@ -384,7 +384,7 @@ e1bc771 add a rainbow to crazy.html
 Remember that thanks to the rebase, about rests on top of master. So, All of our about section commits are grouped together, which would not be the case had we merged instead of rebase. This also eliminates an unnecessary fork in our project history.
 
 
-# 	* [Add Dummy Page for Mary](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
+# 	* [Add Dummy Page for Mary](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing---content)
 
 Once again, the next two snapshots are unneccessarily trivil. However, we will use an interactive rebase to combine them into a single commit later on. That's right, git rebase not only lets you move branches around, it enables you to manipulate individual commits as you do so.
 
@@ -409,7 +409,7 @@ $ git commit -m "Add empty HTML page for Mary's bio"
  create mode 100644 about/mary.html
 ```
 
-# 	* [Link to the About Section](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
+# 	* [Link to the About Section](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing---content)
 
 Then, add a link to the about page in index.html so that its "Navigation" section looks like the following:
 
@@ -458,7 +458,7 @@ $ git commit -a -m "Add link to about section in home page"
  1 file changed, 3 insertions(+)
 ```
 
-# 	* [Clean up the Commit History](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
+# 	* [Clean up the Commit History](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing---content)
 
 Before we merge into the master branch, we should make sure we have a clean, meaningful history in our feature branch. By rebasing interactively, we can choose how each commit is transferred to the new base. Specify an interactive rebase by passing the -i flag to the rebase command:
 
@@ -608,7 +608,7 @@ As well in the diagram before
 
 Interactive rebasing gives you complete control over your project history, but this can also be very dangerous. For example, if you were to delete a line from the rebase listing, the associated commit would not be transferred to the new base, and its content would be lost forever. In a future module, we will also see how rewriting history can get you in trouble with the public Git repositories.
 
-# 	* [Stop to Amend a Commit](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
+# 	* [Stop to Amend a Commit](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing---content)
 
 The previous rebase only stopped us to edit the messages of each commit.
 We can take this one step further and alter a snapshot during the rebase.
@@ -715,7 +715,7 @@ e1bc771 add a rainbow to crazy.html
 You can use the default message created by git commit. The new --amend flag tell Git to replace the existing commit with the staged snapshot instead of creating a new one. This is also very useful for existing premature commits that often occur during normal development.
 
 
-# 	* [Continue the Interactive Rebase](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
+# 	* [Continue the Interactive Rebase](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing---content)
 
 Remember that we are in the middle of a rebase, and Git still has one more commit that it needs to re-play. Tell Git that we are ready to move on with the continue flag:
 
@@ -748,7 +748,7 @@ e1bc771 add a rainbow to crazy.html
 6a442fc Create index page for the message
 ```
 
-# 	* [Publish the About Section](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
+# 	* [Publish the About Section](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing---content)
 
 The point of all this interactive rebasing is to generate a meaningful history that we can merge back into master. And, since we have rebased about onto the tip of master, Git will be able to perform a fast-forward merge instead of using a merge commit to join the two branches.
 
@@ -826,7 +826,7 @@ Our final history is shown in the figure below. As you can see, a linear history
 
 ![Screen Shot 2020-05-29 at 11 06 55](https://user-images.githubusercontent.com/24994818/83280605-89609600-a19c-11ea-9686-133d7863dc33.png)
 
-# 	* [Conclusion](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
+# 	* [Conclusion](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing---content)
 
 Rebasing enables fast-forward merges by moving a branch to the tip of another branch. It effectively eliminates the need for merge commits, resulting in a completely linear history. To an outside observer, it will seem as though you created every part of your project in a neatly (pulcramente) planned sequence, even though you may have explored various alternatives or developed unrelated features in parallel. Rebasing gives you the power to choose exactly what gets stored in you repositories.
 
@@ -842,7 +842,7 @@ $ git merge --no-ff branchName
 
 The next module will get a little bit more involved in our project history. We will try fixing mistakes via complex rebases end even learn how to recover deleted commits.
 
-# 	* [Quick References](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
+# 	* [Quick References](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing---content)
 
 ```console
 $ git rebase newBase
