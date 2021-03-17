@@ -6,6 +6,7 @@
  * [Another emergency update!](https://github.com/c4arl0s/6RebasingRysGitTutorial#-another-emergency-update)
  * [Publish News Hotfix](https://github.com/c4arl0s/6RebasingRysGitTutorial#-publish-news-hotfix)
  * [Rebase the about Branch](https://github.com/c4arl0s/6RebasingRysGitTutorial#-rebase-the-about-branch)
+   - [Let's create an example modifying README.md file](https://github.com/c4arl0s/6RebasingRysGitTutorial#lets-create-an-example-modifying-readmemd-file)
  * [Add a Personal Bio](https://github.com/c4arl0s/6RebasingRysGitTutorial#-add-a-personal-bio)
  * [Add Dummy Page for Mary](https://github.com/c4arl0s/6RebasingRysGitTutorial#-add-dummy-page-for-mary)
  * [Link to the About Section](https://github.com/c4arl0s/6RebasingRysGitTutorial#-link-to-the-about-section)
@@ -427,7 +428,7 @@ e1bc771 add a rainbow to crazy.html
 
 **Once again, the next two snapshots are unneccessarily trivial**. However, we will use an interactive rebase to combine them into a single commit later on. That's right, git rebase not only lets you move branches around, it enables you to manipulate individual commits as you do so.
 
-**Create a new empty file in the about section about/mary.**html
+**Create a new empty file in the about section about/mary.html**.
 
 ```console
 $ vim about/mary.html
@@ -450,7 +451,7 @@ $ git commit -m "Add empty HTML page for Mary's bio"
 
 # 	* [Link to the About Section](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing---content)
 
-Then, add a link to the about page in index.html so that its "Navigation" section looks like the following:
+**Then, add a link to the about page in index.html so that its "Navigation" section looks like the following**:
 
 ```html
 <!DOCTYPE html>
@@ -499,7 +500,7 @@ $ git commit -a -m "Add link to about section in home page"
 
 # 	* [Clean up the Commit History](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing---content)
 
-Before we merge into the master branch, we should make sure we have a clean, meaningful history in our feature branch. By rebasing interactively, we can choose how each commit is transferred to the new base. Specify an interactive rebase by passing the -i flag to the rebase command:
+Before we merge into the master branch, we should make sure we have a clean, meaningful history in our feature branch. **By rebasing interactively, we can choose how each commit is transferred to the new base**. Specify an interactive rebase by passing the -i flag to the rebase command:
 
 ```console
 $ git rebase -i master
@@ -507,7 +508,7 @@ $ git rebase -i master
 
 This should open up a text editor populated with all of the commits introduced in the about branch, listed from the oldest to newest. The listing defines exactly how Git will transfer the commits to the new base. Leaving it as is will do a normal git rebase, but if we move the lines around, we can change the order in which commits are applied.
 
-In addition, we can replace the pick command before each line to edit it or combine it with other commits. All of the available commands are shown in the comment section of the rebase listing, but right now, we only need the squash command. This will condensate our unnecessarily small commits into a single, meaningful snapshot. Change your listing to match the following:
+In addition, we can replace the pick command before each line to edit it or combine it with other commits. All of the available commands are shown in the comment section of the rebase listing, but right now, we only need the squash command. **This will condensate our unnecessarily small commits into a single, meaningful snapshot**. Change your listing to match the following:
 
 ```console
 pick edff70e Add empty page in about section
@@ -645,12 +646,14 @@ As well in the diagram before
 
 ![Screen Shot 2020-05-26 at 19 09 34](https://user-images.githubusercontent.com/24994818/82961997-8723ef00-9f84-11ea-8324-be7e1496069e.png)
 
-Interactive rebasing gives you complete control over your project history, but this can also be very dangerous. For example, if you were to delete a line from the rebase listing, the associated commit would not be transferred to the new base, and its content would be lost forever. In a future module, we will also see how rewriting history can get you in trouble with the public Git repositories.
+**Interactive rebasing gives you complete control over your project history, but this can also be very dangerous**. 
+
+> For example, if you were to delete a line from the rebase listing, the associated commit would not be transferred to the new base, and its content would be lost forever. In a future module, we will also see how rewriting history can get you in trouble with the public Git repositories.
 
 # 	* [Stop to Amend a Commit](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing---content)
 
 The previous rebase only stopped us to edit the messages of each commit.
-We can take this one step further and alter a snapshot during the rebase.
+**We can take this one step further and alter a snapshot during the rebase**.
 Start by running another interactive rebasing session. Note that we have still been using master as the new base because it selects the desired commits from the about branch.
 
 ```console
@@ -665,7 +668,7 @@ edit c5c692e Begin creating bio pages
 pick def4be5 Add link to about section in home page
 ```
 
-When Git starts to move the second commit to the new base, it will stoo to do some "amending" (enmendar, rectificar). This gives you the opportunity to alter the staged snapshot before committing it.
+When Git starts to move the second commit to the new base, it will still stop to do some "amending" (enmendar, rectificar). This gives you the opportunity to alter the staged snapshot before committing it.
 
 ![Screen Shot 2020-05-28 at 18 43 50](https://user-images.githubusercontent.com/24994818/83205087-368ecc00-a113-11ea-926a-d29bb89f572b.png)
 
@@ -789,7 +792,7 @@ e1bc771 add a rainbow to crazy.html
 
 # 	* [Publish the About Section](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing---content)
 
-The point of all this interactive rebasing is to generate a meaningful history that we can merge back into master. And, since we have rebased about onto the tip of master, Git will be able to perform a fast-forward merge instead of using a merge commit to join the two branches.
+**The point of all this interactive rebasing is to generate a meaningful history that we can merge back into master**. And, since we have rebased about onto the tip of master, Git will be able to perform a fast-forward merge instead of using a merge commit to join the two branches.
 
 ```console
 $ git checkout master
@@ -854,26 +857,26 @@ e1bc771 add a rainbow to crazy.html
 6a442fc Create index page for the message
 ```
 
-Don't forget to delete the obsolete **about** branch.
+Don't forget to delete the obsolete about branch.
 
 ```console
 $ git branch -d about
 Deleted branch about (was 20b9d5d).
 ```
 
-Our final history is shown in the figure below. As you can see, a linear history is much easier to comprehend that the back-and-forth merging of the previous module. But on the other hand, we don't have the slightest notion of how we got to our current state.
+Our final history is shown in the figure below. **As you can see, a linear history is much easier to comprehend that the back-and-forth merging of the previous module**. But on the other hand, we don't have the slightest notion of how we got to our current state.
 
 ![Screen Shot 2020-05-29 at 11 06 55](https://user-images.githubusercontent.com/24994818/83280605-89609600-a19c-11ea-9686-133d7863dc33.png)
 
 # 	* [Conclusion](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing---content)
 
-Rebasing enables fast-forward merges by moving a branch to the tip of another branch. It effectively eliminates the need for merge commits, resulting in a completely linear history. To an outside observer, it will seem as though you created every part of your project in a neatly (pulcramente) planned sequence, even though you may have explored various alternatives or developed unrelated features in parallel. Rebasing gives you the power to choose exactly what gets stored in you repositories.
+**Rebasing enables fast-forward merges by moving a branch to the tip of another branch**. It effectively eliminates the need for merge commits, resulting in a completely linear history. To an outside observer, it will seem as though you created every part of your project in a neatly (pulcramente) planned sequence, even though you may have explored various alternatives or developed unrelated features in parallel. **Rebasing gives you the power to choose exactly what gets stored in you repositories**.
 
-This can actually be a bit of a controversial topic within the Git community. Some believe that the benefits discussed in this module are not worth the hassle (molestia) of rewriting history. They take a more "pure" approach to Git by saying that your history should reflect exactly what you have done, ensuring that no information is ever lost. Furthermore, an advance configuration o git log can display a linear history from a highly-branched repository.
+This can actually be a bit of a controversial topic within the Git community. **Some believe that the benefits discussed in this module are not worth the hassle (molestia) of rewriting history**. They take a more "pure" approach to Git by saying that your history should reflect exactly what you have done, ensuring that no information is ever lost. Furthermore, an advance configuration o git log can display a linear history from a highly-branched repository.
 
-But, others contend that merge commits should be meaningful. Instead of merging at arbitrary points just to access updates, they claim that merge commits should represent a symbolic joining of two branches. In particular, large software projects (such as the Linux Kernel) typically advocate interactive rebasing to keep the repository as clean and straightforward as possible.
+**But, others contend that merge commits should be meaningful**. Instead of merging at arbitrary points just to access updates, they claim that merge commits should represent a symbolic joining of two branches. In particular, large software projects (such as the Linux Kernel) typically advocate interactive rebasing to keep the repository as clean and straightforward as possible.
 
-The use of git rebase is entirely up to you. Customizing the evolution of your project can b very beneficial, but it might not be worth the trouble when you can accomplish close to the same functionality using merges exclusively. As a related note, you can use the following command to force a merge commit when Git would normally do a fast-forward merge.
+The use of git rebase is entirely up to you. **Customizing the evolution of your project can be very beneficial, but it might not be worth the trouble when you can accomplish close to the same functionality using merges exclusively**. As a related note, you can use the following command to force a merge commit when Git would normally do a fast-forward merge.
 
 ```console
 $ git merge --no-ff branchName
