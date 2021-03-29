@@ -19,9 +19,10 @@
 
 # [6 Rebasing](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing---content)
 
-Let's start this module by taking an in-depth look at our history. The six commits asterisked below are part of the same train thought. 
+Let's start this module by taking an in-depth look at our history. **The six commits asterisked below are part of the same train thought**. 
 
 We even developed them in their own feature branch. However, they show up interspersed with commits from other branches, along with a superfluous merge commit (b9f2b14).
+
 In other words, our repository's history is kind of messy:
 
 ```console
@@ -43,16 +44,13 @@ b9f2b14 Merge branch 'master' into crazy
 6a442fc Create index page for the message
 ```
 
-Fortunately, Git includes a tool to help us clean up our commits: git rebase. 
-**Rebasing lets us move branches around by changing the commit that they are based on**. 
-Conceptually, this is what it allows us to do:
+Fortunately, Git includes a tool to help us clean up our commits: git rebase. **Rebasing lets us move branches around by changing the commit that they are based on**. Conceptually, this is what it allows us to do:
 
 ![Screen Shot 2020-05-26 at 11 15 18](https://user-images.githubusercontent.com/24994818/82924636-3a1f2900-9f42-11ea-8f9a-fb7163b73a5e.png)
 
 **After rebasing, the feature branch has a new parent commit, which is the same commit pointed to by master**. **Instead of joining the branches with a merge commit, rebasing integrates the feature branch by building on top of master**. The result is a perfectly linear history that reads more like a story than the hodgepodge of unrelated edits shown above.
 
 To explore Git's rebasing capabilities, we will need to build up our example project so that we have something to work with. Then, we will go back and rewrite history using git rebase
-
 
 # 	* [Create an About Section](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing---content)
 
@@ -299,8 +297,7 @@ e1bc771 add a rainbow to crazy.html
 6a442fc Create index page for the message
 ```
 
-Originally, the about branch was based on the Merge branch 'crazy-experiment' commit.
-The rebase took the entire about branch and plopped it onto the tip of the master branch, which is visualized in the following diagram. Also notice that, like the git merge command, git rebase requires you to be on the branch that you want to move.
+Originally, the about branch was based on the Merge branch 'crazy-experiment' commit. The rebase took the entire about branch and plopped it onto the tip of the master branch, which is visualized in the following diagram. Also notice that, like the git merge command, git rebase requires you to be on the branch that you want to move.
 
 ![Screen Shot 2020-05-26 at 16 56 45](https://user-images.githubusercontent.com/24994818/82954216-e75d6580-9f71-11ea-8cd6-ad0e3c78d9d2.png)
 
@@ -506,7 +503,7 @@ Before we merge into the master branch, we should make sure we have a clean, mea
 $ git rebase -i master
 ```
 
-This should open up a text editor populated with all of the commits introduced in the about branch, listed from the oldest to newest. The listing defines exactly how Git will transfer the commits to the new base. Leaving it as is will do a normal git rebase, but if we move the lines around, we can change the order in which commits are applied.
+This should open up a text editor populated with all of the commits introduced in the about branch, listed from the oldest to newest. **The listing defines exactly how Git will transfer the commits to the new base**. Leaving it as is will do a normal git rebase, but if we move the lines around, we can change the order in which commits are applied.
 
 In addition, we can replace the pick command before each line to edit it or combine it with other commits. All of the available commands are shown in the comment section of the rebase listing, but right now, we only need the squash command. **This will condensate our unnecessarily small commits into a single, meaningful snapshot**. Change your listing to match the following:
 
@@ -668,7 +665,7 @@ edit c5c692e Begin creating bio pages
 pick def4be5 Add link to about section in home page
 ```
 
-When Git starts to move the second commit to the new base, it will still stop to do some "amending" (enmendar, rectificar). This gives you the opportunity to alter the staged snapshot before committing it.
+**When Git starts to move the second commit to the new base, it will still stop to do some "amending" (enmendar, rectificar**). This gives you the opportunity to alter the staged snapshot before committing it.
 
 ![Screen Shot 2020-05-28 at 18 43 50](https://user-images.githubusercontent.com/24994818/83205087-368ecc00-a113-11ea-926a-d29bb89f572b.png)
 
@@ -754,7 +751,7 @@ e1bc771 add a rainbow to crazy.html
 6a442fc Create index page for the message
 ```
 
-You can use the default message created by git commit. The new --amend flag tell Git to replace the existing commit with the staged snapshot instead of creating a new one. This is also very useful for existing premature commits that often occur during normal development.
+You can use the default message created by git commit. **The new --amend flag tell Git to replace the existing commit with the staged snapshot instead of creating a new one**. This is also very useful for existing premature commits that often occur during normal development.
 
 
 # 	* [Continue the Interactive Rebase](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing---content)
