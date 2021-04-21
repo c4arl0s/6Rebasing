@@ -1,21 +1,26 @@
 # [go back to Content](https://github.com/c4arl0s/RysGitTutorial#rys-git-tutorial)
 
 # [6 Rebasing - Content](https://github.com/c4arl0s/6RebasingRysGitTutorial#go-back-to-content)
- * [Create an About Section](https://github.com/c4arl0s/6RebasingRysGitTutorial#-create-an-about-section)
- * [Add an About Page](https://github.com/c4arl0s/6RebasingRysGitTutorial#-add-an-about-page)
- * [Another emergency update!](https://github.com/c4arl0s/6RebasingRysGitTutorial#-another-emergency-update)
- * [Publish News Hotfix](https://github.com/c4arl0s/6RebasingRysGitTutorial#-publish-news-hotfix)
- * [Rebase the about Branch](https://github.com/c4arl0s/6RebasingRysGitTutorial#-rebase-the-about-branch)
-   - [Let's create an example modifying README.md file](https://github.com/c4arl0s/6RebasingRysGitTutorial#lets-create-an-example-modifying-readmemd-file)
- * [Add a Personal Bio](https://github.com/c4arl0s/6RebasingRysGitTutorial#-add-a-personal-bio)
- * [Add Dummy Page for Mary](https://github.com/c4arl0s/6RebasingRysGitTutorial#-add-dummy-page-for-mary)
- * [Link to the About Section](https://github.com/c4arl0s/6RebasingRysGitTutorial#-link-to-the-about-section)
- * [Clean up the Commit History](https://github.com/c4arl0s/6RebasingRysGitTutorial#-clean-up-the-commit-history)
- * [Stop to Amend a Commit](https://github.com/c4arl0s/6RebasingRysGitTutorial#-stop-to-amend-a-commit)
- * [Continue the Interactive Rebase](https://github.com/c4arl0s/6RebasingRysGitTutorial#-continue-the-interactive-rebase)
- * [Publish the About Section](https://github.com/c4arl0s/6RebasingRysGitTutorial#-publish-the-about-section)
- * [Conclusion](https://github.com/c4arl0s/6RebasingRysGitTutorial#-conclusion)
- * [Quick References](https://github.com/c4arl0s/6RebasingRysGitTutorial#-quick-references)
+
+- [Create an About Section](https://github.com/c4arl0s/6RebasingRysGitTutorial#-create-an-about-section)
+- [Add an About Page](https://github.com/c4arl0s/6RebasingRysGitTutorial#-add-an-about-page)
+- [Another emergency update!](https://github.com/c4arl0s/6RebasingRysGitTutorial#-another-emergency-update)
+- [Publish News Hotfix](https://github.com/c4arl0s/6RebasingRysGitTutorial#-publish-news-hotfix)
+- [Rebase the about Branch](https://github.com/c4arl0s/6RebasingRysGitTutorial#-rebase-the-about-branch)
+    - [Let's create an example modifying README.md file](https://github.com/c4arl0s/6RebasingRysGitTutorial#lets-create-an-example-modifying-readmemd-file)
+- [Add a Personal Bio](https://github.com/c4arl0s/6RebasingRysGitTutorial#-add-a-personal-bio)
+- [Add Dummy Page for Mary](https://github.com/c4arl0s/6RebasingRysGitTutorial#-add-dummy-page-for-mary)
+- [Link to the About Section](https://github.com/c4arl0s/6RebasingRysGitTutorial#-link-to-the-about-section)
+- [Clean up the Commit History](https://github.com/c4arl0s/6RebasingRysGitTutorial#-clean-up-the-commit-history)
+- [Stop to Amend a Commit](https://github.com/c4arl0s/6RebasingRysGitTutorial#-stop-to-amend-a-commit)
+- [Continue the Interactive Rebase](https://github.com/c4arl0s/6RebasingRysGitTutorial#-continue-the-interactive-rebase)
+- [Publish the About Section](https://github.com/c4arl0s/6RebasingRysGitTutorial#-publish-the-about-section)
+- [Conclusion](https://github.com/c4arl0s/6RebasingRysGitTutorial#-conclusion)
+- [Quick References](https://github.com/c4arl0s/6RebasingRysGitTutorial#-quick-references)
+
+1. [Using Interactive Rebase](https://github.com/c4arl0s/6Rebasing#1-using-interactive-rebase)
+
+
 
 # [6 Rebasing](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing---content)
 
@@ -912,4 +917,26 @@ Abandon the current interactive rebase and return the repository to its former s
 $ git merge --no-ff branchName
 ```
 Force a merge commit even if Git could do a fast-forward merge.
+
+# 1. [Using Interactive Rebase](https://github.com/c4arl0s/6Rebasing#6-rebasing---content)
+
+In this case that I am going to document I found that I wanted to commit in my history a commit which contains a work that I didn't want to lose. So first, I tried to rebase main with  C1 and C2, but C1 had merge conflicts with the last commit on main branch.
+
+![51265589-0703-4327-BDA7-7696793FD67F-1-2048x1536-0-oriented copy](https://user-images.githubusercontent.com/24994818/115579497-d86b5a00-a28b-11eb-9d92-daf464eba648.png)
+
+This branch was not essential for the project because the idea was too complex, so I just wanted to commit the executed work. So in order to commit this work you have to squash C1 and C2 in one commit. You can do this doing an interactive rebase.
+
+Solution 1:
+
+- Remove last commit (it has minimum changes on main branch)
+- Then try to do the interactive rebase. 
+- Once you rebase the main branch you are able to marge this branch.
+- After merging, you are able to revert this commit, which contains the "executed work" and keep it in the history.
+
+The interactive rebase was successful, because it is a fast forward. In this case last commit had minimum changes so I was able to discard them.
+
+Solution 2:
+
+- In order to keep "last commit". You have to rebase your branch with minimum number of commits, I mean one commit. So then try to do the rebase. 
+- Once you are able to do the rebase, you merge this branch and then revert this commit, remember, this commit it is juts to insert this effort in the history line.
 
