@@ -2,25 +2,25 @@
 
 # [6 Rebasing - Content](https://github.com/c4arl0s/6RebasingRysGitTutorial#go-back-to-content)
 
-- [Create an About Section](https://github.com/c4arl0s/6RebasingRysGitTutorial#-create-an-about-section)
-- [Add an About Page](https://github.com/c4arl0s/6RebasingRysGitTutorial#-add-an-about-page)
-- [Another emergency update!](https://github.com/c4arl0s/6RebasingRysGitTutorial#-another-emergency-update)
-- [Publish News Hotfix](https://github.com/c4arl0s/6RebasingRysGitTutorial#-publish-news-hotfix)
-- [Rebase the about Branch](https://github.com/c4arl0s/6RebasingRysGitTutorial#-rebase-the-about-branch)
-    - [Let's create an example modifying README.md file](https://github.com/c4arl0s/6RebasingRysGitTutorial#lets-create-an-example-modifying-readmemd-file)
-- [Add a Personal Bio](https://github.com/c4arl0s/6RebasingRysGitTutorial#-add-a-personal-bio)
-- [Add Dummy Page for Mary](https://github.com/c4arl0s/6RebasingRysGitTutorial#-add-dummy-page-for-mary)
-- [Link to the About Section](https://github.com/c4arl0s/6RebasingRysGitTutorial#-link-to-the-about-section)
-- [Clean up the Commit History](https://github.com/c4arl0s/6RebasingRysGitTutorial#-clean-up-the-commit-history)
-- [Stop to Amend a Commit](https://github.com/c4arl0s/6RebasingRysGitTutorial#-stop-to-amend-a-commit)
-- [Continue the Interactive Rebase](https://github.com/c4arl0s/6RebasingRysGitTutorial#-continue-the-interactive-rebase)
-- [Publish the About Section](https://github.com/c4arl0s/6RebasingRysGitTutorial#-publish-the-about-section)
-- [Conclusion](https://github.com/c4arl0s/6RebasingRysGitTutorial#-conclusion)
-- [Quick References](https://github.com/c4arl0s/6RebasingRysGitTutorial#-quick-references)
+1. [x] [1. Create an About Section](https://github.com/c4arl0s/6RebasingRysGitTutorial#-create-an-about-section)
+2. [x] [2. Add an About Page](https://github.com/c4arl0s/6RebasingRysGitTutorial#-add-an-about-page)
+3. [x] [3. Another emergency update!](https://github.com/c4arl0s/6RebasingRysGitTutorial#-another-emergency-update)
+4. [x] [4. Publish News Hotfix](https://github.com/c4arl0s/6RebasingRysGitTutorial#-publish-news-hotfix)
+5. [x] [5. Rebase the about Branch](https://github.com/c4arl0s/6RebasingRysGitTutorial#-rebase-the-about-branch)
+    - 6. [x] [6. Let's create an example modifying README.md file](https://github.com/c4arl0s/6RebasingRysGitTutorial#lets-create-an-example-modifying-readmemd-file)
+7. [x] [7. Add a Personal Bio](https://github.com/c4arl0s/6RebasingRysGitTutorial#-add-a-personal-bio)
+8. [x] [8. Add Dummy Page for Mary](https://github.com/c4arl0s/6RebasingRysGitTutorial#-add-dummy-page-for-mary)
+9. [x] [9. Link to the About Section](https://github.com/c4arl0s/6RebasingRysGitTutorial#-link-to-the-about-section)
+10. [x] [10. Clean up the Commit History](https://github.com/c4arl0s/6RebasingRysGitTutorial#-clean-up-the-commit-history)
+11. [x] [11. Stop to Amend a Commit](https://github.com/c4arl0s/6RebasingRysGitTutorial#-stop-to-amend-a-commit)
+12. [x] [12. Continue the Interactive Rebase](https://github.com/c4arl0s/6RebasingRysGitTutorial#-continue-the-interactive-rebase)
+13. [x] [13. Publish the About Section](https://github.com/c4arl0s/6RebasingRysGitTutorial#-publish-the-about-section)
+14. [x] [14. Conclusion](https://github.com/c4arl0s/6RebasingRysGitTutorial#-conclusion)
+15. [x] [15. Quick References](https://github.com/c4arl0s/6RebasingRysGitTutorial#-quick-references)
+
+# More
 
 1. [Using Interactive Rebase](https://github.com/c4arl0s/6Rebasing#1-using-interactive-rebase)
-
-
 
 # [6 Rebasing](https://github.com/c4arl0s/6RebasingRysGitTutorial#6-rebasing---content)
 
