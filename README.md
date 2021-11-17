@@ -17,6 +17,7 @@
 13. [x] [13. Publish the About Section](https://github.com/c4arl0s/6RebasingRysGitTutorial#-publish-the-about-section)
 14. [x] [14. Conclusion](https://github.com/c4arl0s/6RebasingRysGitTutorial#-conclusion)
 15. [x] [15. Quick References](https://github.com/c4arl0s/6RebasingRysGitTutorial#-quick-references)
+16. [x] [16. git squash older commits (not last one)](https://github.com/c4arl0s/6Rebasing#16-git-squash-older-commits-not-last-one)
 
 # More
 
@@ -939,4 +940,40 @@ Solution 2:
 
 - In order to keep "last commit". You have to rebase your branch with minimum number of commits, I mean one commit. So then try to do the rebase. 
 - Once you are able to do the rebase, you merge this branch and then revert this commit, remember, this commit it is juts to insert this effort in the history line.
+
+# 16. [git squash older commits (not last one)](https://github.com/c4arl0s/6Rebasing#6-rebasing---content)
+
+1. Start an interactive rebase:
+
+```console
+git rebase -i HEAD~n
+```
+
+> n: is how far do you want to go back in history
+
+2. Your default text editor will open. At the top, a list of your latest `n` commits will be displayed, in reverse order.
+
+```console
+pick a5f4a0d commit-1
+pick 19aab46 commit-2
+pick 1733ea4 commit-3
+pick 827a099 commit-4
+pick 10c3f38 commit-5
+pick d32d526 commit-6
+```
+
+3. replace `pick` keyword with `squash` keyword in order to try to squash those commits:
+
+```console
+pick a5f4a0d commit-1
+squash 19aab46 commit-2
+squash 1733ea4 commit-3
+squash 827a099 commit-4
+squash 10c3f38 commit-5
+pick d32d526 commit-6
+```
+
+4. Save and exit.
+
+5. Git will apply all changes and will open again your editor to merge the three commit messages. You can modify your commit messages or leave it as it is (if so, the commit messages of all commits will be concatenated).
 
